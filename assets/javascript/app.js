@@ -8,7 +8,7 @@ $(document).ready(function () {
     "Survivor"
   ];
   //for loop to create buttons based on the strings in the array
-
+var s = " ";
   function renderButtons() {
     $("#buttons").empty();
     for (i = 0; i < topics.length; i++) {
@@ -52,7 +52,7 @@ $(document).ready(function () {
     });
   });
 
-  $(".gif").on("click", function () {
+  $(document).on("click", ".gif", function () {
     var state = $(this).attr("data-state");
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
@@ -62,6 +62,7 @@ $(document).ready(function () {
       $(this).attr("data-state", "still");
     }
   });
+
   $("#submit").on("click", function (event) {
     event.preventDefault();
     var newTvButton = $("#userInput").val().trim();
