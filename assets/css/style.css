@@ -1,0 +1,24 @@
+.gif {
+    width: auto;
+    height: 100px;
+    margin: 0px 10px;
+}
+
+.item {
+    float: left;
+}
+
+.tv {
+    background: silver;
+    color: teal;
+    border-radius: 4px;
+    border: 1px, solid;
+    margin: 150px 5px 0px 5px;
+    font-weight: bold;
+}
+
+body {
+    background-image: url(../images/tv.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
