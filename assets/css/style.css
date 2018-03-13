@@ -4,16 +4,29 @@
     margin: 0px 10px;
 }
 
+.container {
+    margin-top: 150px;
+}
+
 .item {
     float: left;
 }
 
 .tv {
     background: silver;
-    color: teal;
+    color: black;
     border-radius: 4px;
     border: 1px, solid;
-    margin: 150px 5px 0px 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+#submit {
+    background: silver;
+    color: black;
+    border-radius: 4px;
+    border: 1px, solid;
+    margin-top: 5px;
     font-weight: bold;
 }
 
@@ -21,4 +34,48 @@ body {
     background-image: url(../images/tv.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+#newTv {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: silver;
+    text-shadow: 2px 2px 8px black;
+}
+
+.p {
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 1500px) {
+    .gif {
+        width: auto;
+        height: 75px;
+        margin: 0px 5px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .gif {
+        width: auto;
+        height: 50px;
+        margin: 0px 5px;
+    }
+/* As the screen got really small it was difficult to keep the gifs inside the frame of the tv image, so I decided to get rid of the background image and just leave the screen white.*/
+
+    body {
+        background-color:white;
+        background-image: none;
+    }
+
+    #newTv {
+        font-size: large;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: black;
+        text-shadow: none;
+        }
+
 }

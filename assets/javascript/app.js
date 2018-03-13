@@ -39,6 +39,7 @@ $(document).ready(function() {
         var gifDiv = $("<div class='item'>");
         var rating = results[i].rating;
         var p = $("<p>").text("Rating: " + rating);
+        p.addClass("p");
         var tvImage = $("<img>");
         var still = results[i].images.original_still.url;
         var animate = results[i].images.original.url;
