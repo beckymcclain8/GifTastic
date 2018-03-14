@@ -24,13 +24,19 @@ $(document).ready(function() {
   $(document).on("click", ".tv", function() {
     var show = $(this).attr("data-name");
     var queryURL =
-      "http://api.giphy.com/v1/gifs/search?api_key=H7VadhDh2o2nP6aHy83tuseFHFjLSd4C&q=" +
+      "https://api.giphy.com/v1/gifs/search?api_key=H7VadhDh2o2nP6aHy83tuseFHFjLSd4C&q=" +
       show +
       "&limit=10";
 
     $.ajax({
       url: queryURL,
-      method: "GET"
+      method: "GET",
+      success: function() {
+        console.log("success");
+      },
+      error: function(req, status, error) {
+        console.log("req" + req + " status:" + status + " error:" + error);
+      }
     }).then(function(response) {
       $("#gifs").empty();
       var results = response.data;
