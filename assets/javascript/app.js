@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //array of tv shows
   var topics = [
     "Friends",
@@ -21,7 +21,7 @@ $(document).ready(function() {
     }
   }
   //When the user clicks a button, it sends an AJAX request to the GIPHY API.
-  $(document).on("click", ".tv", function() {
+  $(document).on("click", ".tv", function () {
     var show = $(this).attr("data-name");
     var queryURL =
       "https://api.giphy.com/v1/gifs/search?api_key=H7VadhDh2o2nP6aHy83tuseFHFjLSd4C&q=" +
@@ -31,14 +31,16 @@ $(document).ready(function() {
     $.ajax({
       url: queryURL,
       method: "GET",
-      success: function() {
+      //Chris, I left this in here in case I need to reference it in the future!
+      success: function () {
         console.log("success");
       },
-      error: function(req, status, error) {
+      error: function (req, status, error) {
         console.log("req" + req + " status:" + status + " error:" + error);
       }
-    }).then(function(response) {
+    }).then(function (response) {
       $("#gifs").empty();
+      console.log(response);
       var results = response.data;
       //for loop that creates the divs that holds the gifs and ratings based on the AJAX response
       for (var i = 0; i < results.length; i++) {
@@ -64,7 +66,7 @@ $(document).ready(function() {
     });
   });
   //event listener that changes the gif from from still to animated based on it's current data state
-  $(document).on("click", ".gif", function() {
+  $(document).on("click", ".gif", function () {
     var state = $(this).attr("data-state");
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
@@ -75,7 +77,7 @@ $(document).ready(function() {
     }
   });
   //A  button to submit new tv shows... and create a new button at the top of the page.
-  $("#submit").on("click", function(event) {
+  $("#submit").on("click", function (event) {
     event.preventDefault();
     var newTvButton = $("#userInput")
       .val()

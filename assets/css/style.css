@@ -43,7 +43,10 @@ body {
     color: silver;
     text-shadow: 2px 2px 8px black;
 }
-
+/* 
+h3 {
+    font-size: medium; */
+}
 .p {
     font-weight: bold;
     text-align: center;
