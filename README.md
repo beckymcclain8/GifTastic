@@ -6,4 +6,6 @@ The gifs will load as a still picture. If you would like to animate them, just c
 
 ### Please visit this site at:  https://beckymcclain8.github.io/GifTastic/
 
+![Giftastic](/assets/images/app.JPG)
+
 This app was created and maintained by Becky McClain
