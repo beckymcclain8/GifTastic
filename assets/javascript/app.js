@@ -4,7 +4,7 @@ $(document).ready(function () {
     "Friends",
     "Seinfeld",
     "Sesame Street",
-    "Reading Rainbow",
+    "Reading Rainbow", 
     "CSI",
     "Survivor"
   ];
@@ -61,7 +61,7 @@ $(document).ready(function () {
         gifDiv.append(p);
         gifDiv.prepend(tvImage);
         $("#gifs").prepend(gifDiv);
-        console.log(results);
+        // console.log(results);
       }
     });
   });
